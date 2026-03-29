@@ -35,6 +35,7 @@ const userSchema=new mongoose.Schema({
 
 })
 
-const User =mongoose.models.users || mongoose.model("User", userSchema);
+// Reuse existing model in dev to avoid OverwriteModelError
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 
 export default User;
