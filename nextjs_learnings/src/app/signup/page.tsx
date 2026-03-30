@@ -53,6 +53,8 @@ export default function SignupPage() {
           className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-blue-600 transition duration-200"
           type="text"
           id="username"
+          name="username"
+          autoComplete="username"
           value={user.username}
           onChange={(e) => setUser({ ...user, username: e.target.value })}
           placeholder='username'
@@ -63,6 +65,8 @@ export default function SignupPage() {
           className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-blue-600 transition duration-200"
           type="email"
           id="email"
+          name="email"
+          autoComplete="email"
           value={user.email}
           onChange={(e) => setUser({ ...user, email: e.target.value })}
           placeholder='email'
@@ -73,6 +77,8 @@ export default function SignupPage() {
           className="p-2 border border-gray-300 rounded-lg mb-6 focus:outline-none focus:border-blue-600 transition duration-200"
           type="password"
           id="password"
+          name="password"
+          autoComplete="new-password"
           value={user.password}
           onChange={(e) => setUser({ ...user, password: e.target.value })}
           placeholder='password'
